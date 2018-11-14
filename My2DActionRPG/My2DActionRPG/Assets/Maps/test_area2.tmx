@@ -3,7 +3,7 @@
  <properties>
   <property name="unity:scale" value=".0625"/>
  </properties>
- <tileset firstgid="1" source="../../../../Tiled/Maps/base tileset.tsx"/>
+ <tileset firstgid="1" source="../../../../../../Tiled/Maps/base tileset.tsx"/>
  <tileset firstgid="1768" source="red_collision.tsx"/>
  <layer id="1" name="Tile Layer 1" width="75" height="75">
   <data encoding="csv">

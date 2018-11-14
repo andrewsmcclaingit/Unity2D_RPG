@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     //any object with this script attached, all playerExists will use this bool (that's what static means)
     private static bool playerExists;
 
+
     // Use this for initialization
     //when scene start
     void Start()
