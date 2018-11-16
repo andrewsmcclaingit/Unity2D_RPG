@@ -102,21 +102,25 @@ public class SlimeController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D other)
     {
-    
+
         //when slime collides with other object with 2d collision box
-        if(other.gameObject.name == "Player")
-        {
-            //vid 12 Destroy(other.gameObject);
+        /* if(other.gameObject.name == "Player")
+         {
+             //vid 12 Destroy(other.gameObject);
 
-            //other is what we found aka player, player no longer active
-            //when reload scnee make sure player is active again
-            //reloading level
-            other.gameObject.SetActive(false);
-            reloading = true;
-            thePlayer = other.gameObject;
+             //other is what we found aka player, player no longer active
+             //when reload scnee make sure player is active again
+             //reloading level
+             other.gameObject.SetActive(false);
+             reloading = true;
+             thePlayer = other.gameObject;
+
+
+         //vid 15
 
 
 
-        }
+
+         }*/
     }
 }
