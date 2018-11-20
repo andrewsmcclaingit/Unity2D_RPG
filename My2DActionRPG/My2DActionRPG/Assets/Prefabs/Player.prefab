@@ -11,6 +11,21 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1452247149815240}
   m_IsPrefabAsset: 1
+--- !u!1 &1282705219203728
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4848717108827036}
+  m_Layer: 0
+  m_Name: HitPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1306322233730410
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,10 +51,10 @@ GameObject:
   - component: {fileID: 4093912988274748}
   - component: {fileID: 212966089224490130}
   - component: {fileID: 114398029883733920}
+  - component: {fileID: 114177759412542616}
   - component: {fileID: 95472115979280170}
   - component: {fileID: 61689580434373242}
   - component: {fileID: 50461821096319092}
-  - component: {fileID: 114177759412542616}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -58,7 +73,7 @@ GameObject:
   - component: {fileID: 212652845955919918}
   - component: {fileID: 61518761014961248}
   - component: {fileID: 114519521308398182}
-  - component: {fileID: 50428661057621812}
+  - component: {fileID: 50500070427278930}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -94,6 +109,19 @@ Transform:
   m_Father: {fileID: 4093912988274748}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4848717108827036
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1282705219203728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.022, y: 0.455, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4904850529751704}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4904850529751704
 Transform:
   m_ObjectHideFlags: 1
@@ -103,30 +131,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.43, y: -0.072, z: 0}
   m_LocalScale: {x: 2, y: 2.25, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4848717108827036}
   m_Father: {fileID: 4337643725046362}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50428661057621812
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1564647732507122}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!50 &50461821096319092
 Rigidbody2D:
   serializedVersion: 4
@@ -144,6 +153,26 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!50 &50500070427278930
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1564647732507122}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -241,6 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   lastMove: {x: 0, y: 0}
+  attackTime: 0.1
 --- !u!114 &114519521308398182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -252,6 +282,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92a64d1c6417514a80263cafaf53cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToGive: 5
+  damageBurst: {fileID: 1394984844100924, guid: dc49deb81f34d2d4693d564516d4dccd,
+    type: 2}
+  hitPoint: {fileID: 4848717108827036}
 --- !u!212 &212652845955919918
 SpriteRenderer:
   m_ObjectHideFlags: 1

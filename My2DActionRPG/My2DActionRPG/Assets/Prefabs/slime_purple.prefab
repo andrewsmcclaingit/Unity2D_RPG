@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114143168319014866}
   - component: {fileID: 50456314847411138}
   - component: {fileID: 58606529775716608}
+  - component: {fileID: 114154789000956360}
   m_Layer: 0
   m_Name: slime_purple
   m_TagString: Enemy
@@ -106,6 +107,19 @@ MonoBehaviour:
   timeBetweenMove: 0.5
   timeToMove: 0.5
   waitToReload: 0.5
+--- !u!114 &114154789000956360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416269400662060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff341ab018215bb4fa71c1e5a6914e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  CurrentHealth: 0
 --- !u!212 &212272315065950032
 SpriteRenderer:
   m_ObjectHideFlags: 1
