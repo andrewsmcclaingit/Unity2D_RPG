@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416269400662060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 577.462, y: -474.594, z: 0}
+  m_LocalPosition: {x: 577.394, y: -474.624, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,12 +74,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.031982422, y: 0.107543945}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.29797363
+  m_Radius: 0.30551147
 --- !u!114 &114090866307131876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31a817bd023d59499af12185407f535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 100
+  damageToGive: 45
 --- !u!114 &114143168319014866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5709daa67099db84fa068c8da6206f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 25
+  moveSpeed: 8
   timeBetweenMove: 0.5
   timeToMove: 0.5
   waitToReload: 0.5
