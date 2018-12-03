@@ -1141,6 +1141,7 @@ RectTransform:
   - {fileID: 1856774798}
   - {fileID: 480722503}
   - {fileID: 1606292202}
+  - {fileID: 1724098018}
   m_Father: {fileID: 1963573671}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1802,6 +1803,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &540112983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 540112985}
+  - component: {fileID: 540112984}
+  m_Layer: 0
+  m_Name: StartPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &540112984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 540112983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981b7b721fe761c438e98212e13885a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDirection: {x: 0, y: 0}
+  pointName: Tent secret exit
+--- !u!4 &540112985
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 540112983}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 567.17, y: -473.63, z: 0.15327911}
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &655943647
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,6 +3899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelToLoad: tent_inside
+  exitPoint: tent entrance
 --- !u!50 &1252762816
 Rigidbody2D:
   serializedVersion: 4
@@ -4428,7 +4472,7 @@ GameObject:
   - component: {fileID: 1606292201}
   - component: {fileID: 1606292200}
   m_Layer: 5
-  m_Name: Text
+  m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4838,6 +4882,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1724098017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1724098018}
+  - component: {fileID: 1724098020}
+  - component: {fileID: 1724098019}
+  m_Layer: 5
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1724098018
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1724098017}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 297956636}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -39.9, y: -55.5}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1724098019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1724098017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 18
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 0
+    m_MaxSize: 80
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'LVL: 99'
+--- !u!222 &1724098020
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1724098017}
+  m_CullTransparentMesh: 0
 --- !u!1 &1770126200
 GameObject:
   m_ObjectHideFlags: 0
@@ -5519,6 +5638,7 @@ GameObject:
   - component: {fileID: 1963573669}
   - component: {fileID: 1963573668}
   - component: {fileID: 1963573672}
+  - component: {fileID: 1963573673}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5616,6 +5736,21 @@ MonoBehaviour:
   healthBar: {fileID: 297956637}
   hpText: {fileID: 1606292200}
   playerHealth: {fileID: 1522228737}
+  levelText: {fileID: 1724098019}
+--- !u!114 &1963573673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1963573667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c71a26657504904093fce92b008d1ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 0
+  currentExp: 0
+  toLevelUp: 00000000140000003200000064000000fa000000f4010000e8030000d6060000c4090000ac0d0000
 --- !u!1 &1995365081
 GameObject:
   m_ObjectHideFlags: 0
@@ -5719,6 +5854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: {x: 0, y: 0}
+  pointName: tent exit
 --- !u!4 &2001123769
 Transform:
   m_ObjectHideFlags: 0

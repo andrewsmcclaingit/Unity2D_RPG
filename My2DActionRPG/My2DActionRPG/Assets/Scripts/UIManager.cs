@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour {
     public Text hpText;
     public PlayerHealthManager playerHealth;
     private static bool UIExists;
+    private PlayerStats thePlayerStats;
+    public Text levelText;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +28,7 @@ public class UIManager : MonoBehaviour {
             Destroy(gameObject);
         }
 
+        thePlayerStats = GetComponent<PlayerStats>();
     }
 	
 	// Update is called once per frame
@@ -35,5 +38,6 @@ public class UIManager : MonoBehaviour {
         healthBar.value = playerHealth.playerCurrentHealth; //bar shows current health calling from playerhealth manager
         //healthBar.minValue = 0f;
         hpText.text = "HP: " + playerHealth.playerCurrentHealth + "/" + playerHealth.playerMaxHealth;
+        levelText.text = "LVL: " + thePlayerStats.currentLevel;
 	}
 }
