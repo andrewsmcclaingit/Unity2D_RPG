@@ -5,6 +5,7 @@ using UnityEngine;
 public class HurtPlayer : MonoBehaviour {
 
     public int damageToGive;
+    public GameObject damageNumber;
 
     // Use this for initialization
     void Start() {
@@ -22,6 +23,8 @@ public class HurtPlayer : MonoBehaviour {
         //when slime collides with other object with 2d collision box
         if (other.gameObject.name == "Player")
         {
+            var clone = (GameObject)Instantiate(damageNumber, other.transform.position, Quaternion.Euler(Vector3.zero));
+            clone.GetComponent<FloatingNumbers>().damageNumber = damageToGive;
 
             other.gameObject.GetComponent<PlayerHealthManager>().HurtPlayer(damageToGive);
         }
