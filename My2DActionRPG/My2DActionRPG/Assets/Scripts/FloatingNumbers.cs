@@ -10,10 +10,11 @@ public class FloatingNumbers : MonoBehaviour {
     public Text displayNumber;
 
 
+
 	// Use this for initialization
 	void Start () {
 
-      }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,4 +23,5 @@ public class FloatingNumbers : MonoBehaviour {
         displayNumber.text = "" + damageNumber;
         transform.position = new Vector3(transform.position.x, transform.position.y + (moveSpeed * Time.deltaTime), transform.position.z);
 	}
+
 }
