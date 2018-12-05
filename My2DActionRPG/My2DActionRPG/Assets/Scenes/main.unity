@@ -4458,16 +4458,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114177759412542616, guid: 6724e1bffd675d642ae868cb20fda5c9,
-        type: 2}
-      propertyPath: flashLength
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114177759412542616, guid: 6724e1bffd675d642ae868cb20fda5c9,
-        type: 2}
-      propertyPath: flashActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6724e1bffd675d642ae868cb20fda5c9, type: 2}
   m_IsPrefabAsset: 0
@@ -5761,6 +5751,12 @@ MonoBehaviour:
   currentLevel: 0
   currentExp: 0
   toLevelUp: 00000000140000003200000064000000fa000000f4010000e8030000d6060000c4090000ac0d0000
+  HPLevels: 320000003200000035000000380000003b0000004100000046000000490000004c00000050000000
+  atkLevels: 0100000001000000020000000400000006000000080000000a0000000c0000000e0000000f000000
+  defLevels: 00000000000000000100000001000000020000000200000003000000030000000400000004000000
+  currentHP: 0
+  currentATK: 0
+  currentDEF: 0
 --- !u!1 &1995365081
 GameObject:
   m_ObjectHideFlags: 0

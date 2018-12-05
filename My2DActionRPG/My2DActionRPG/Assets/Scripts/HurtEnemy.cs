@@ -9,9 +9,14 @@ public class HurtEnemy : MonoBehaviour {
     public Transform hitPoint;
     public GameObject damageNumber;
 
+    //vid 25
+    private PlayerStats thePS;
+    private int currentDMG;
+
 	// Use this for initialization
 	void Start () {
 
+        thePS = FindObjectOfType<PlayerStats>();
 
     }
 	
@@ -28,13 +33,15 @@ public class HurtEnemy : MonoBehaviour {
         if (other.gameObject.tag == "Enemy")
         {
             // Destroy(other.gameObject);
-           
-            other.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
+
+            currentDMG = damageToGive + thePS.currentATK;
+
+            other.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(currentDMG);
             //damage particle effect on sword transform position
             Instantiate(DamageBurst, hitPoint.position, hitPoint.rotation);
             //vid 18 ~24min
             var clone = (GameObject) Instantiate(damageNumber, hitPoint.position, Quaternion.Euler (Vector3.zero));
-            clone.GetComponent<FloatingNumbers>().damageNumber = damageToGive;
+            clone.GetComponent<FloatingNumbers>().damageNumber = currentDMG;
             //clone.transform.position = new Vector2(transform.position.x, transform.position.y);
             // number appears at the hitPoint of sword on enemy
             clone.transform.position = hitPoint.position;
